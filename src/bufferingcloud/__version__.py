@@ -1,0 +1,11 @@
+__title__ = 'BufferingCloud'
+__description__ = 'Intergartion for AWS,Azure,Alibaba-Cloud Python3 sdk.'
+__url__ = 'https://www.heyeahfun.com/bufferingcloud/Download'
+__doc__ = 'https://www.heyeahfun.com/bufferingcloud/introduction'
+__version__ = '0.0.1'
+__build__ = 0x022701
+__author__ = 'Vergil He'
+__author_email__ = '691267837@qq.com'
+__license__ = 'MIT'
+__copyright__ = 'Copyright 2024 Vergil He'
+__cake__ = u'\u2728 \U0001f370 \u2728'
