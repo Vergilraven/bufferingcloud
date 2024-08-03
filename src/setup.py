@@ -36,17 +36,17 @@ Created on 18/06/2024
 @email: 691267837@qq.com
 """
 here = os.path.abspath(os.path.dirname(__file__))
-spec = importlib.util.spec_from_file_location("bufferingcloud", "src/bufferingcloud/__init__.py")
-bufferingcloud = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(bufferingcloud)
+# spec = importlib.util.spec_from_file_location("bufferingcloud", "src/bufferingcloud/__init__.py")
+# bufferingcloud = importlib.util.module_from_spec(spec)
+# spec.loader.exec_module(bufferingcloud)
 
-PACKAGE = "src/bufferingcloud"
-NAME = "bufferingcloud" or "bufferingcloud-integration"
+PACKAGE = "bufferingcloud"
+NAME = "bufferingcloud" or "BufferingCloud"
 DESCRIPTION = "BufferingCloud Client integration of Alicloud Python3 sdk"
 AUTHOR = "VergilHe"
 AUTHOR_EMAIL = "vergilheyeahfun@gmail.com"
 URL = "https://github.com/VergilRaven/bufferingcloud"
-VERSION = bufferingcloud.__version__
+# VERSION = bufferingcloud.__version__
 REQUIRES = [
     "alibabacloud-credentials==0.3.2",
     "alibabacloud-ecs20140526==3.0.8",
@@ -84,11 +84,10 @@ setup(
     license="MIT",
     url=URL,
     keywords=["bufferingcloud", "intergrate alibaba-cloud python3 sdk"],
-    packages=find_packages(where="src", exclude=["tests*"],
-                           include=["bufferingcloud"]),
+    packages=find_packages(exclude=["test*"]),
     include_package_data=True,
     platforms="any",
-    package_dir={"": "src"},
+    # package_dir={"": "src"},
     install_requires=REQUIRES,
     python_requires=">=3.6",
     classifiers=(
