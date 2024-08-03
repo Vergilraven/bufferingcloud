@@ -17,9 +17,7 @@ from bufferingcloud.core.ecs.exception import EcsDescribeDisksBodyError
 
 
 class EcsBot(AbstractEcsCaller):
-    """
-    ECS接口机器人
-    """
+
     @staticmethod
     def initlize_client(pass_sensitive_data: Dict[str, str]) -> Ecs20140526Client:
         """
@@ -38,7 +36,7 @@ class EcsBot(AbstractEcsCaller):
             return Ecs20140526Client(config)
 
         except KeyError as e:
-            raise Exception(f"Missing accesskey or secretkey or region,so initlizing the client failed: {e}")
+            raise Exception(f"AccessKey,Secretkey,region are missed,So that initlize the client failed: {e}")
 
     @classmethod
     def get_state(cls) -> str:
